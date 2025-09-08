@@ -1,0 +1,22 @@
+.signup-main{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    gap: 10px;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+
+}
+.signup-main:hover{
+    color: grey;
+    cursor: pointer;
+}
+@media only screen and (max-width:600px){
+    .signup-main{
+        color:blue;
+        background-image: image-set(url("image/flower2.jpeg"));
+
+    }
+}
+

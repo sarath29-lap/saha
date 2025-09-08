@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> sample webpage</title>
+        <link rel="stylesheet" href="sample.css"/>
+        </head>
+    <body>
+        <input type="text" placeholder="enter ur username" id="user-input"/>
+        <input type="password" placeholder="enter ur password" id="user-pass"/>
+        <button onclick="handlelogin()">Login</button>
+        
+        <script>
+            function handlelogin(){
+            let user=document.getElementById("user-input").value
+            let pass=document.getElementById("user-pass").value
+
+            let signupuser=localStorage.getItem("username")
+            let signuppass=localStorage.getItem("password")
+            if(user === signupuser && pass === signuppass){
+                alert("login success")
+                setTimeout(() => {
+                     window.location.href="home.html"
+                },3000)
+               
+            }else{
+                alert("invalid credentials")
+            }
+        }
+            
+
+
+
+        </script>
+
+
+    </body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>signup webpage</title>
+        <link rel="stylesheet" href="signup.css"/>
+        </head>
+    <body class="signup-main">
+        <div class="signup-wrap">
+            <h1>Signup</h1>
+        <input type="text" placeholder="enter ur username" id="user-input"/>
+         <input type="password" placeholder="enter ur password" id="user-pass"/>
+          <input type="number" placeholder="enter ur ph number" id="user-phno"/>
+           <input type="email" placeholder="enter ur email" id="user-email"/>
+            <input type="text" placeholder="enter ur city" id="user-city"/></br>
+
+            <button onclick="handlesubmit()">Signup</button>
+            </div>
+            <script>
+                function handlesubmit(){
+                    let user = document.getElementById("user-input").value
+                    let pass = document.getElementById("user-pass").value
+                    let phno = document.getElementById("user-phno").value
+                    let email = document.getElementById("user-email").value
+                    let city = document.getElementById("user-city").value
+
+                    if(user=="" || pass=="" || phno=="" || email=="" || city==""){
+                        alert("please enter all credentials")
+                    }else{
+                        localStorage.setItem("username",user)
+                        localStorage.setItem("password",pass)
+                        alert("signup success")
+                        window.location.href="sample.html"
+                    }
+                    
+                }
+
+
+            
+        </script>
+
+
+    </body>
+    </html>
